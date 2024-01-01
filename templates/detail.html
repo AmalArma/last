@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="col-md-6">
+<img src="{{movie.img.url}}" width="250">
+
+<link rel="stylesheet" href="{% static 'stylee.css' %}">
+<h2>{{movie.name}}</h2>
+    <h4>{{movie.desc}}</h4>
+    <h6>{{movie.year}}</h6>
+     <a  class="btn btn-warning" href="{%url 'update' movie.id %}">update</a>
+     <a  class="btn btn-warning" href="{%url 'delete' movie.id %}">Delete</a>
+</div>
+{%endblock%}
